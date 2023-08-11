@@ -29,11 +29,11 @@ const Section = () => {
         // notify()
     }
 
-    const handleMassage = () => {
-        getMessage(`
+    const handleMassage = async () => {
+        await getMessage(`
             Baseado no script SQL:
             ${scriptSQL}
-            Escreva um script SQL respondendo a pergunta:
+            Escreva um script SQL respondendo a pergunta baseado no script anterior:
             ${question}
         `)
         setResponse(openAIState.message)

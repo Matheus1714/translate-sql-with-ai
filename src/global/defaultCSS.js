@@ -6,7 +6,6 @@ export const DefaultCSS = createGlobalStyle`
 }
 body{
     background-color: #242424;
-    height: 100vh;
     display:flex;
     justify-content: center;
     align-items: center;
