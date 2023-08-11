@@ -6,7 +6,7 @@ export const DefaultCSS = createGlobalStyle`
     font-family: 'Inter', sans-serif;
 }
 body{
-    background-color: ${theme.colors.soft.backgroud};
+    background-color: #242424;
     height: 100vh;
     display:flex;
     justify-content: center;
