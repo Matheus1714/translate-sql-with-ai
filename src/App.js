@@ -3,9 +3,7 @@ import Layout from './components/layout';
 
 const App = () => {
   return (
-    <Layout>
-
-    </Layout> 
+    <Layout />
   )
 }
 

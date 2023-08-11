@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import * as S from "./styled";
-import Logo from "../logo";
-import ClearTerminalButton from "../clearTerminalButton";
+import mainLogo from "../../assets/Logo.svg"
+import trashImg from "../../assets/Trash.svg"
+
 
 const Header = () => {
     return (
     <header>
         <S.Wrapper>
-            <Logo />
-            <ClearTerminalButton />
+            <S.LogoImg src={mainLogo} alt="askSQL" />
+            <S.TrashImg src={trashImg} alt="trash" />
         </S.Wrapper>
     </header>
     )

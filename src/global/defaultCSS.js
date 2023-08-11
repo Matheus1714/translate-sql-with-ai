@@ -7,7 +7,9 @@ export const DefaultCSS = createGlobalStyle`
 }
 body{
     background-color: ${theme.colors.soft.backgroud};
+    height: 100vh;
     display:flex;
     justify-content: center;
+    align-items: center;
 }
 `
