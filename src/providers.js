@@ -2,13 +2,16 @@ import React from "react";
 import App from "./App";
 import { ResetCSS } from "./global/resetCSS";
 import { DefaultCSS } from './global/defaultCSS'
+import OpenAIProvider from "./providers/openai-provider";
 
 const Providers = () => {
   return (
     <main>
-      <ResetCSS />
-      <DefaultCSS />
-      <App />
+      <OpenAIProvider>
+        <ResetCSS />
+        <DefaultCSS />
+        <App />
+      </OpenAIProvider>
     </main>
   );
 };
