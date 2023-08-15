@@ -65,7 +65,7 @@ npm run dev
 I learned how to use Open AI resources in the project using the [OpenAI Node.js Library](https://www.npmjs.com/package/openai) npm package. With that package and with the settings in the [OpenAI API](https://platform.openai.com/) account I was able to develop calls to the AI model.
 
 ```jsx
-// services/api.js
+// src/services/api.js
 import { Configuration, OpenAIApi } from 'openai'
 
 const configuration = new Configuration({
