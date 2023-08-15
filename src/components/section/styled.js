@@ -118,8 +118,14 @@ export const ButtonSubmit = styled.button`
     &:active{
         opacity: 0.5;
     }
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
 `
 
 export const LogoImg = styled.img`
     width:32px;
+    @media (max-width: 768px) {
+        width:24px;
+    }
 `;
