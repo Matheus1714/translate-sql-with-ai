@@ -127,4 +127,4 @@ export const OpenAIContext = createContext({
 
 ## Acknowledgment
 
-Thanks to [Rocketseat](https://www.rocketseat.com.br/) for the content and initiatives it provides.🚀
+Thanks to [Rocketseat](https://www.rocketseat.com.br/) for this challenge and initiatives it provides.🚀
