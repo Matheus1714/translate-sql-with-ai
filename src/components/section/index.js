@@ -3,8 +3,9 @@ import * as S from './styled'
 import sparkleImg from "../../assets/Sparkle.svg"
 import copyIcon from '../../assets/Copy.svg'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-// import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import useOpenAI from "../../hooks/openai-hooks";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Section = () => {
 
@@ -24,19 +25,27 @@ const Section = () => {
     const [ response, setResponse ] = useState('Minha resposta de teste')
     const [ copySuccess, setCopySuccess ] = useState(false)
 
+    const hadleClearAll = () => {
+        setResponse('')
+        setQuestion('')
+        setScriptSQL('')
+    }
+
     const handleCopy = () => {
         setCopySuccess(true)
-        // notify()
+        toast("Mensagem Copiada com sucesso.")
     }
 
     const handleMassage = async () => {
-        await getMessage(`
+        toast("Menssagem enviada para IA, espere um momento!")
+        const responseAI = await getMessage(`
             Baseado no script SQL:
             ${scriptSQL}
             Escreva um script SQL respondendo a pergunta baseado no script anterior:
             ${question}
         `)
-        setResponse(openAIState.message)
+        toast("Tudo pronto!!!")
+        setResponse(responseAI)
     }
 
     return (
@@ -79,8 +88,8 @@ const Section = () => {
                             src={copyIcon} 
                             alt="copiar"
                         />
-                        {/* <ToastContainer /> */}
                     </CopyToClipboard>
+                    <ToastContainer />
                 </S.WrapperResposta>
             </S.WrapperSection>
         </>
