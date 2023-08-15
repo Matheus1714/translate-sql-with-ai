@@ -33,9 +33,18 @@ The project dependencies were:
 }
 ```
 
+## Config Project
+
+Before running the project, create an .env file and fill in your `API_KEY` and `OPEN_AI_ORGANIZATION` obtained from the [OpenAI API](https://platform.openai.com/) platform. You must register and create a key through the platform.
+
+```env
+VITE_API_KEY=...
+VITE_OPEN_AI_ORGANIZATION=...
+```
+
 ## Run Project
 
-Run the installation of dependencies with:
+With `.env` file configured, run the installation of dependencies with:
 
 ```shell
 npm i
